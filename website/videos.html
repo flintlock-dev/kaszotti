@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moje wideo - kaszotti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1 class="logo">kaszotti</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="about.html">O mnie</a></li>
+        <li><a href="videos.html" class="active">Wideo</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="hero">
+    <div class="container">
+      <h2>Moje Wideo</h2>
+      <p>Zobacz moje najnowsze projekty i filmy.</p>
+    </div>
+  </section>
+  <section id="videos" class="content-section">
+    <div class="container">
+      <h2>Galeria wideo</h2>
+      <div class="video-grid">
+        <!-- Wideo 1 -->
+        <div class="video-item">
+          <h3>Projekt 1</h3>
+          <video controls>
+            <source src="videos/project1.mp4" type="video/mp4">
+            Twoja przeglądarka nie wspiera wideo.
+          </video>
+        </div>
+        <!-- Wideo 2 -->
+        <div class="video-item">
+          <h3>Projekt 2</h3>
+          <video controls>
+            <source src="videos/project2.mp4" type="video/mp4">
+            Twoja przeglądarka nie wspiera wideo.
+          </video>
+        </div>
+        <!-- Wideo 3 -->
+        <div class="video-item">
+          <h3>Projekt 3</h3>
+          <video controls>
+            <source src="videos/project3.mp4" type="video/mp4">
+            Twoja przeglądarka nie wspiera wideo.
+          </video>
+        </div>
+      </div>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XxNAwZ-A88w?si=T4JdCV30D-tcY7fV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Michał Knurowski (kaszotti). Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+</body>
+</html>
