@@ -42,74 +42,74 @@
                 Instalacja pfSense na maszynie wirtualnej ( Przykład na Virtualbox)
                 Odpalamy VirtualBoxa i klikamy nowa maszyna
             </p>
-            <img src="fotopfsense/pf1.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense1.png" alt="kup se internet :[">
             <p>Wpisujemy nazwę Maszyny wybieramy wybieramy typ systemu BSD i subtype FreeBSD 64bit</p>
-            <img src="fotopfsense/pf2.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense2.png" alt="kup se internet :[">
             <p>Oraz wybieramy miejsce gdzie znajduje się plik ISO</p>
-            <img src="fotopfsense/pf3.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense3.png" alt="kup se internet :[">
             <p>Klikamy zakładkę na Hardware zmieniamy ram na 512MB ram nie ma dużego znaczenia dla tego systemu ale 512MB to taki safezone gdzie system chodzi szybko i nie zajmuje dużo pamięci RAM.</p>
-            <img src="fotopfsense/pf4.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense4.png" alt="kup se internet :[">
             <p>Klikamy zakończ i przechodzimy do ustawień wirtualnej maszyny</p>
-            <img src="fotopfsense/pf5.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense5.png" alt="kup se internet :[">
             <p>Wybieramy zakładkę Network gdzie zmieniamy karty sieciowe, ja wybieram na kartę 1 kartę bridged czyli używanie fizycznej karty sieciowej jako karta do wirtualnej maszyny a na 2 kartę kartę wewnętrzną która służy do komunikacji pomiędzy maszynami wirtualnymi na jednym komputerze.</p>
-            <img src="fotopfsense/pf6.png" alt="kup se internet :[">
-            <img src="fotopfsense/pf7.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense6.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense7.png" alt="kup se internet :[">
             <p>Następnie klikamy okay i odpalamy maszynę wirtualną aby przejść przez jej setup. Czekamy aż skończy się bootować</p>
-            <img src="fotopfsense/pf8.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense8.png" alt="kup se internet :[">
             <p>Virtual box spyta się o przechwytywanie klawiatury. kliknij przechwyć aby wyłączyć przechwytywanie kliknij przycisk hosta (na windows domyślnie prawy alt , na MacOS domyślnie lewy command)  Klikamy ENTER aby zaakceptować licencje copywrite pfSense </p>
-            <img src="fotopfsense/pf9.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense9.png" alt="kup se internet :[">
             <p>Klikamy enter aby rozpocząć instalacje pfsense </p>
-            <img src="fotopfsense/pf10.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense10.png" alt="kup se internet :[">
             <p>wybieramy rodzaj partycjonowania dysku (jest to tutorial podstaw więc nie będę wchodził w co to robi bo no jeśli to ogarniasz to ten tutorial prawdopodobnie nie jest skierowany do ciebie xD) nie ruszamy ustawień tutaj więc porostu klikamy enter na Auto ZFS </p>
-            <img src="fotopfsense/pf11.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense11.png" alt="kup se internet :[">
             <p>Weryfikujemy ustawienia ( w wypadku instalowania tego na vm najlepiej tu nic nie dotykać jeśli nie wiesz co robić) Klikamy enter </p>
-            <img src="fotopfsense/pf12.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense12.png" alt="kup se internet :[">
             <p>klikamy enter na stripe - no redundancy (nawet jakbyśmy chcieli coś tu zmienić to by się nie dało ponieważ ta vm ma tylko 1 dysk)</p>
-            <img src="fotopfsense/pf13.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense13.png" alt="kup se internet :[">
             <p>Zaznaczamy dysk Spacją na którym chcemy zainstalować pfSense  <b>UWAGA!!! Jeśli robisz to na fizycznej maszynie a nie na vm to Z FORMATUJE TWÓJ DYSK !!!!!!!!!</b> Po zaznaczeniu klikamy enter na OK aby kontynuować </p>
-            <img src="fotopfsense/pf14.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense14.png" alt="kup se internet :[">
             <p>pfSense nas też ostrzega o tym że dany dysk zostanie z formatowany ( na vm to nic nie zrobi ponieważ jest to dysk wirtualny)
               <b> ALE UWAGA NA FIZYCZNYCH MASZYNACH ŻEBY NIE USUNĄĆ SOBIE WINDOWSA MISSCLICKIEM</b>
                 Klikamy enter aby potwierdzić </p>
-            <img src="fotopfsense/pf15.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense15.png" alt="kup se internet :[">
             <p>Czekamy aż pfSense się zainstaluje (nie powinno to zająć dużo czasu)</p>
-            <img src="fotopfsense/pf16.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense16.png" alt="kup se internet :[">
             <p>Gdy pojawi się to okienko zanim klikniemy reboot klikamy w to logo płyty w prawym dolnym rogu i klikamy remove disk from Virtual Drive
                 Klikamy wymuś odmontowanie. Klikamy reboot.
             </p>
-            <img src="fotopfsense/pf17.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense17.png" alt="kup se internet :[">
             <p>czekamy chwile aż system się zbootuje i przywita nas taki tekst jak na obrazku powyżej
                 Z funkcji które będziemy teraz omawiać aka które przydadzą się w szkole to
                 2 Set interface(s) IP address. Służy do ustawiania adresów IP na kartach sieciowych
                 Wpisujemy 2 i klikamy enter
             </p>
-            <img src="fotopfsense/pf18.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense18.png" alt="kup se internet :[">
             <p>Wybieramy który interface chcemy skonfigurować. WAN to interface z którego pfSense otrzymuje internet zazwyczaj zostawiamy na DHCP i nic nie zmieniamy w początkowych zadaniach. LAN to interface wyjściowy który daje internet innym urządzenią już po routingu zrobionym przez pfSense. W tym wypadku skonfigurujemy LAN na adres 192.168.2.1/24
                 Wpisujemy 2 i klikamy enter</p>
-            <img src="fotopfsense/pf19.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense19.png" alt="kup se internet :[">
             <p>dostaniemy pytanie czy chcemy skonfigurować adres ip przy użyciu DHCP,  wpisujemy n jako zaprzeczenie ponieważ konfigurujemy adres statycznie.</p>
-            <img src="fotopfsense/pf20.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense20.png" alt="kup se internet :[">
             <p>W polu tekstowym wpisujemy adres jaki chcemy dać dla Gate tego routera , w tym tutorialu jest to 192.168.2.1
                 I klikamy enter</p>
             <img src="fotopfsense/192.168.2.1.png" alt="kup se internet :[">
             <p>W tym momencie pfSense zapyta nas się o maskę sieci , chcemy otrzymać adres 192.168.2.1/24
                 Więc jako maskę wpisujemy 24</p>
-            <img src="fotopfsense/pf21.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense21.png" alt="kup se internet :[">
             <p>Teraz pyta się o adres upstream , ale w tym poradniku tego nie poruszam ponieważ w tym zastosowaniu to się nie przyda więc klikamy enter bez wpisywania niczego</p>
-            <img src="fotopfsense/pf22.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense22.png" alt="kup se internet :[">
             <p>W tym polu wyboru wpisujemy n i klikamy enter ponieważ ten tutorial dotyczy tylko IPv4 (sam nie umiem w IPv6 i nie ma z tego prawie zadań na inf02) </p>
-            <img src="fotopfsense/pf23.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense23.png" alt="kup se internet :[">
             <p>klikamy enter bez wpisywania niczego ponieważ nie chcemy mieć adresu IPv6</p>
-            <img src="fotopfsense/pf24.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense24.png" alt="kup se internet :[">
             <p>Robienie serwera DHCP na pfSense. Jeśli chcemy miec DHCP server to klikamy Y i enter , jeśli chcemy sobie adresować komputery statycznie to klikamy N i enter. Na potrzebę tego tutoriala skonfigurujemy server DHCP na zakres 192.168.2.10-192.168.2.20</p>
-            <img src="fotopfsense/pf25.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense25.png" alt="kup se internet :[">
             <p>Wpisujemy początkowy adres zakresu czyli u nas 192.168.2.10 i klikamy enter</p>
-            <img src="fotopfsense/pf26.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense26.png" alt="kup se internet :[">
             <p>W kolejnym polu tekstowym wpisujemy końcowy adres zakresu czyli u nas 192.168.2.20 i klikamy enter
 
                 Po kliknięciu enter wyskoczy okienko czy chcemy używać HTTP jako strony konfiguracji
                 Do tego zastosowania jakie teraz robimy nie ma znaczenia czy damy Y czy N chociaż jeśli planujemy łączyć ten pfSense z nieco starszym systemem windows jak np. Windows Server 2012r2 to lepiej kliknąć Y żeby się nie musieć męczyć z popup okienkami na internet explorer.</p>
-            <img src="fotopfsense/pf27.png" alt="kup se internet :[">
+            <img src="fotopfsense/pfsense27.png" alt="kup se internet :[">
             <p>I voilà w taki o to sposób skonfigurowałeś swojego pfSense :3</p>
         </div>
     </section>
