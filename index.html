@@ -59,5 +59,20 @@
         <p>&copy; 2024 Michał Knurowski "kaszotti". Wszystkie prawa zastrzeżone. Strona still work in progress</p>
     </div>
 </footer>
+<script>
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let inputSequence = [];
+
+    document.addEventListener('keydown', (e) => {
+        inputSequence.push(e.key);
+        if (inputSequence.length > konamiCode.length) {
+            inputSequence.shift();
+        }
+        if (inputSequence.join('') === konamiCode.join('')) {
+            document.body.classList.add('konami-effect');
+            alert('30 Lives!!!! :3');
+        }
+    });
+</script>
 </body>
 </html>
